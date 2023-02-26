@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Look-alike Football Player</title>
+<!--   <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Dropzone/dropzone.min.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename='Dropzone/dropzone.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='webpage.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Your Look-alike Footbal Player</h1>
+        <h2>Discover This App Now</h2>
+        <button class="btn" id="try-now-button">TRY NOW</button>
+        </header>
+        <section>
+            <div class="images">
+               <div class="image"> 
+                 <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Football Player 1">
+                 <p>Erling Halland</p>
+               </div> 
+               <div class="image"> 
+                 <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Football Player 2">
+                 <p>Lionnel Messi</p>
+                </div> 
+                 <div class="image"> 
+                 <img src="{{ url_for('static', filename='img/4.jpg') }}" alt="Football Player 3">
+                 <p>Cristiano Ronaldo</p>
+                </div> 
+                 <div class="image"> 
+                 <img src="{{ url_for('static', filename='img/7.jpg') }}" alt="Football Player 3">
+                 <p>Riyad Mahrez</p>
+                </div> 
+                 <div class="image"> 
+                 <img src="{{ url_for('static', filename='img/5.jpg') }}" alt="Football Player 3">
+                 <p>Kyian Mbappe</p>
+                </div> 
+            </div>
+        </section>       
+<section id="section2" class="work-area" style="background-color:#549DA0;">
+    <div class="results" id="results">
+        <div class="welcome-msg" id="welcome-msg">
+            <p>Make sure to use a picture with a clear face as our Machine Learning model uses facial features to measure the resemblance</p>
+        </div>
+        <div class="error">
+        <p>Please make sure that the picture has a clear face and 2 eyes</p>
+        </div>
+        <div class="result-space" id="result-space">
+            <div class="result-player" id="haaland-result-container">
+                <img src="{{url_for('static', filename='haaland.jpg')}}" alt="haaland">
+                <p><b>Erling Haaland</b></p>
+                <p class="similarity"></p>
+            </div>
+            <div class="result-player" id="messi-result-container">
+                <img src="{{url_for('static', filename='messi.jpg')}}" alt="messi">
+                <p><b>Lionel Messi</b></p>
+                <p class="similarity"></p>
+            </div>
+            <div class="result-player" id="ronaldo-result-container">
+                <img src="{{url_for('static', filename='ronaldo.jpg')}}" alt="ronaldo">
+                <p><b>Cristiano Ronaldo</b></p>
+                <p class="similarity"></p>
+            </div>
+            <div class="result-player" id="mbappe-result-container">
+                <img src="{{url_for('static', filename='mbappe.jpg')}}" alt="mbappe">
+                <p><b>Kylian MBAPPE</b></p>
+                <p class="similarity"></p>
+            </div>
+            <div class="result-player" id="mahrez-result-container">
+                <img src="{{url_for('static', filename='mahrez.jpeg')}}" alt="mahrez">
+                <p><b>Riyad MAHREZ</b></p>
+                <p class="similarity"></p>
+            </div>
+        </div>
+    </div> 
+<!--html code for the dropzone begins here-->
+<div class="row" id="dropzoneAll">
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <form action="/classify_image" method="POST" enctype="multipart/form-data" class="dropzone" id="dropzone">
+                    <div class="dz-message needsclick">
+                        <img src="{{ url_for('static', filename='Dropzone/upload.png') }}" width="200px" height="200px"><br>
+                        <span class="note needsclick">Drop files here or click to upload</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-3 mx-auto">
+                <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+            </div>
+        </div>
+    </div>
+</div>          
+<!--html code for the dropzone ends here-->  
+</section>
+</body>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./Dropzone/dropzone.min.js"></script>
+<script src="webpage.js"></script>  -->
+<!--<script type="text/javascript" src="{{ url_for('static', filename='webpage.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='Dropzone/dropzone.min.js') }}"></script> -->
+</html>
