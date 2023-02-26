@@ -23,6 +23,7 @@ Users will be able to upload an image and the server will classify the image and
 
 ### Technologies used in this project:
 *	Python
+* Machine Learning
 *	Numpy and OpenCV for data cleaning
 *	Matplotlib for data visualization
 *	Sklearn for model building
