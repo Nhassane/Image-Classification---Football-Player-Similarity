@@ -30,6 +30,6 @@ Users will be able to upload an image and the server will classify the image and
 *	Python flask for http server
 *	HTML/CSS/Javascript for UI
 
-![screenshot](/ML Face Recognition - Footbal Players Resemblance/Snapshoot.PNG)
+![screenshot](/Snapshoot.PNG)
 
 
