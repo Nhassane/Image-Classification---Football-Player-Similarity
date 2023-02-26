@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'monospace', 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1.45;
+}
+header {
+    background-color:#284b63;
+    text-align: center;
+    color: white;
+   padding: 80px 0px;
+  }
+h1 {
+    font-size: 60px;
+    padding: 0 0 16 0;
+}
+h2 {
+    font-weight: 200;
+    font-size: 50px;
+    padding: 0 0 16 0;
+}
+.btn {
+    background-color: #549DA0;
+    color: white;
+    font-weight: 300;
+    font-size: 26px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 16px;    
+}
+.btn:hover {
+    background-color: #468486;
+}
+.images {
+    display: flex;
+    justify-content:center;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 40px;
+    
+}
+.image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 30px;
+    background-size: cover;
+    justify-self: center;
+
+}
+.image p { text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+#section2 {
+    display: flex;
+    height: 468px;
+    flex-direction: row-reverse;
+    background-color:#549DA0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#dropzoneAll {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+.dz-message needsclick
+#dropzoneAll span {
+    font-size: 18px;
+    font-weight: bold;
+}
+#dropzoneAll form {
+    border: 1px dashed black;
+    min-height: 200;
+}
+#dropzoneAll .btn-success {
+    background-color:#284b63;
+    margin: 15px auto 0;
+    width: 97%;
+    border-radius: 5px;
+}
+#dropzoneAll .btn-success:hover {
+    background-color:#468486;
+}
+.results {
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:monospace;
+    line-height: 2;
+    flex: 2;
+    justify-content: center;
+    align-items: center;   
+}
+#welcome-msg {
+    display: flex;
+    padding: 12px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error {
+    color: rgb(221, 41, 28);
+    margin: 20px;
+    padding: 12px;
+    height: 100%;
+    display: none;
+}
+.result-space p {
+    text-align: left;
+    margin: 40px 20px ;
+    display: none;     
+}
+.result-space {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+.result-player {
+    display: flex;
+    flex-direction: column;
+}
+.result-player p {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+.result-player img {
+    display: block;
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;  
+}
+#messi-result-container {display:none;}
+#ronaldo-result-container {display: none;}
+#mahrez-result-container {display: none;}
+#mbappe-result-container {display: none;}
+#haaland-result-container {display:none;}
+
